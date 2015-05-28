@@ -7,4 +7,10 @@ class PagesController < ApplicationController
 
 	def contact
 	end
+
+	def services
+	end
+
+	def prices
+	end
 end
