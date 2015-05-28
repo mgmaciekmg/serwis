@@ -1,0 +1,19 @@
+<h1>Listebing of reservations</h1>
+<table>
+  <tr>
+    <td>E-mail</td>
+    <td>Phone</td>
+    <td>Name</td>
+    <td>Desc</td>
+    <td>Date</td>
+  </tr>
+  <% @reservations.each do |reservation| %>
+  <tr>
+    <td><%= reservation.email %></td>
+    <td><%= reservation.phone %></td>
+    <td><%= reservation.name %></td>
+    <td><%= reservation.desc %></td>
+    <td><%= reservation.date %></td>
+  <% end %>
+  </tr>
+</table>
