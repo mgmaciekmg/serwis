@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+# Gem to use with this project - you need them!
+gem 'devise'
+gem 'gravtastic'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
