@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :reservations
-  root "reservations#index"
+  resources :reservations, only: [:index, :new, :create, :show]
+  root "pages#index"
+  match '/r/check' => 'reservations#check', via: [:get, :post]
+
+  match '/index' => 'pages#index', via: [:get, :post]
+  match '/about' => 'pages#about', via: [:get, :post]
+  match '/contact' => 'pages#contact', via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
