@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'gravtastic'
 gem 'bootstrap-sass'
+gem 'bootstrap-datepicker-rails'
 gem 'autoprefixer-rails'
 
 
