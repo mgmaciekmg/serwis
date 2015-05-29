@@ -12,7 +12,7 @@
   <%= f.text_field :desc %><br />
 
   <%= f.label :date %>
-  <%= f.datetime_select(:date) %><br />
+  <%= f.select_datetime(:date, order: [:month, :day, :hour, :minutes]) %><br />
 
   <%= f.submit %>
 <% end %>
