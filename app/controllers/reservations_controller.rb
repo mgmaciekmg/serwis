@@ -17,7 +17,7 @@ class ReservationsController < ApplicationController
 			redirect_to root_path
 		else
 			flash[:error] = "This date is reserved."
-			render new_reservation_path
+			render :new
 		end
 	end
 
