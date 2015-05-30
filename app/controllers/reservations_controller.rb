@@ -1,5 +1,10 @@
 class ReservationsController < ApplicationController
 	before_action :authenticate_admin!, only: [:index, :show, :destroy]
+	before_action :find_reservation, only: [:show, :destroy]
+
+	def find_reservation
+		@reservation = Reservation.find(params[:id])
+	end
 
 	def index
 		@reservations = Reservation.all
@@ -22,11 +27,9 @@ class ReservationsController < ApplicationController
 	end
 
 	def show
-		@reservation = Reservation.find(params[:id])
 	end
 
 	def destroy
-		@reservation = Reservation.find(params[:id])
 		if @reservation.destroy
 			flash[:success] = "Successfully deleted reservation."
 			redirect_to reservations_path
