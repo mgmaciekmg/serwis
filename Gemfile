@@ -6,6 +6,9 @@ gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 gem 'autoprefixer-rails'
 
+gem 'barista'
+gem 'therubyracer', :require => nil
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

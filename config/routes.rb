@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :reservations, only: [:index, :new, :create, :show]
+  devise_for :admins
+  resources :reservations, only: [:index, :new, :create, :show, :destroy]
   root "pages#index"
-  match '/r/check' => 'reservations#check', via: [:get, :post]
 
   match '/index' => 'pages#index', via: [:get, :post]
   match '/about' => 'pages#about', via: [:get, :post]

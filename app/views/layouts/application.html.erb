@@ -29,7 +29,11 @@
               <li><%= link_to "Contact", contact_path %></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            <li>-</li>
+            <% if admin_signed_in? %>
+            <li><%= link_to "Log out", destroy_admin_session_path, :method => :delete %></li>
+            <% else %>
+            <li><%= link_to "Log in", new_admin_session_path %></li>
+            <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -37,22 +41,21 @@
 
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <% if flash[:notice] %>
-          <div class="alert alert-info">
-      <a href="#" class="close" data-dismiss="alert">&times;</a>
-          <%= flash[:notice] %>
+      <!-- <div class="jumbotron"> -->
+        <% if flash[:success] %>
+          <div class="alert alert-success">
+          <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <%= flash[:success] %>
           </div>
         <% elsif flash[:error] %>
           <div class="alert alert-danger">
-      <a href="#" class="close" data-dismiss="alert">&times;</a>
-      <%= flash[:error] %>
-      </div>
-    <% end %>
+          <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <%= flash[:error] %>
+          </div>
+        <% end %>
 
       <%= yield %>
-      </div>
-
+      <!-- </div> -->
     </div> <!-- /container -->      
 
 </body>

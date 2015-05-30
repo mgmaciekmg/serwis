@@ -1,1 +1,13 @@
-Name: <%= @reservation.name %>
+<div class="jumbotron">
+Name: <%= @reservation.name %><br />
+
+Date: <%= @reservation.date %><br />
+
+E-mail: <%= @reservation.email %><br />
+
+Phone: <%= @reservation.phone %><br />
+
+Description: <%= @reservation.desc %><br />
+
+<%= link_to "Delete this reservation", reservation_path(@reservation), :method => :delete %>
+</div>

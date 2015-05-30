@@ -5,7 +5,7 @@ class CreateReservations < ActiveRecord::Migration
       t.string :phone
       t.string :desc
       t.string :name
-      t.timestamp :date
+      t.datetime :date
 
       t.timestamps null: false
     end
