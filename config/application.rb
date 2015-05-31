@@ -22,5 +22,15 @@ module Serwis
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.action_mailer.smtp_settings = {
+        address: "smtp.gmail.com",
+        port: 587,
+        domain: "<example.tld>",
+        user_name: "krusmac",
+        password: "Krusmac11",
+        authentication: :plain,
+        enable_starttls_auto: true
+    }
   end
 end

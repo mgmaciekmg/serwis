@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
 # Gem to use with this project - you need them!
 gem 'devise'
-gem 'gravtastic'
+
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
+
+# Style for app.
 gem 'bootstrap-sass'
-gem 'bootstrap-datepicker-rails'
+#gem 'bootstrap-datepicker-rails'
 gem 'autoprefixer-rails'
 
+# Coffescript
 gem 'barista'
 gem 'therubyracer', :require => nil
 

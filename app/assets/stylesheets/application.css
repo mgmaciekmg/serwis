@@ -27,6 +27,7 @@ img:hover {
 */
     body { 
         padding-top: 20px;
+        padding-bottom: 20px;
         background-image: url('background.jpg');
         background-size: cover;
         background-attachment: fixed;
@@ -36,13 +37,23 @@ img:hover {
         -o-background-size: cover;
     }
 
+    #footer, #push {
+        height: auto;
+        background: #222222;
+        height: 200px;
+        margin: 20px 0;
+        border-radius: 6px;
+        border: 1px solid #000;
+    }
+
+
     .jumbotron {
         opacity: 0.85;
     }
 
     .grid-block-container {
     	/*float: left;*/
-    	width: 990px;
+    	width: 1140px;
     	margin: 0 0 0 0;
     }
     .grid-block {
