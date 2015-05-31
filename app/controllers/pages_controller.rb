@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
 	def prices
 	end
+
+	def ourservices
+	end
 end

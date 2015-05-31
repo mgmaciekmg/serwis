@@ -17,12 +17,16 @@ class ReservationsController < ApplicationController
 	def create
 		@reservation = Reservation.create(reservation_params)
 		test = Reservation.select(:date).where('date = ?', @reservation.date).count
-		if test <= 3 && @reservation.save			
-			flash[:success] = "Successfully created reservation."
-			redirect_to root_path
+		if test <= 3
+			if @reservation.save			
+				flash[:success] = "Successfully created reservation."
+				redirect_to root_path
+			else
+				render 'new'
+			end
 		else
 			flash[:error] = "This date is reserved."
-			render :new
+			render 'new'
 		end
 	end
 
