@@ -1,7 +1,55 @@
-<center>
-<%= link_to(image_tag("about.jpg", size: "337x337"), about_path) %>
-<%= link_to(image_tag("services.png", size: "337x337"), services_path) %>
-<%= link_to(image_tag("prices.jpg", size: "337x337"), prices_path) %>
-<%= link_to(image_tag("reservations.jpg", size: "337x337"), reservations_path) %>
-<%= link_to(image_tag("contact.jpg", size: "337x337"), contact_path) %>
-</center>
+<div class="grid-block-container">
+  <div class="grid-block slide">
+    <div class="caption">
+        <h2><%= link_to "About us", about_path %></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><%= link_to "About us", about_path, :class => 'learn-more' %></p>
+    </div>
+    <%= image_tag("about.jpg", :class => 'img-rounded') %>
+  </div>
+
+  <div class="grid-block slide">
+    <div class="caption">
+        <h2><%= link_to "Services", services_path %></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><%= link_to "Services", about_path, :class => 'learn-more' %></p>
+    </div>
+    <%= image_tag("services.jpg", :class => 'img-rounded') %>
+  </div>
+
+  <div class="grid-block slide">
+    <div class="caption">
+        <h2><%= link_to "Prices", prices_path %></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><%= link_to "Prices", prices_path, :class => 'learn-more' %></p>
+    </div>
+    <%= image_tag("prices.jpg", :class => 'img-rounded') %>
+  </div>
+
+  <div class="grid-block slide">
+    <div class="caption">
+        <h2><%= link_to "Our services", our_services_path %></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><%= link_to "Our services", our_services_path, :class => 'learn-more' %></p>
+    </div>
+    <%= image_tag("our_services.jpg", :class => 'img-rounded') %>
+  </div>
+
+  <div class="grid-block slide">
+    <div class="caption">
+        <h2><%= link_to "Reservations", reservations_path %></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><%= link_to "Reservations", reservations_path, :class => 'learn-more' %></p>
+    </div>
+    <%= image_tag("reservation.jpg", :class => 'img-rounded') %>
+  </div>
+
+  <div class="grid-block slide">
+    <div class="caption">
+        <h2><%= link_to "Contact", contact_path %></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><%= link_to "Contact", contact_path, :class => 'learn-more' %></p>
+    </div>
+    <%= image_tag("contact.jpg", :class => 'img-rounded') %>
+  </div>
+</div>
