@@ -38,12 +38,13 @@ img:hover {
     }
 
     #footer, #push {
-        height: auto;
+        width: 100%;
         background: #222222;
         height: 200px;
         margin: 20px 0;
         border-radius: 6px;
         border: 1px solid #000;
+        z-index: auto;
     }
 
 

@@ -5,7 +5,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p><%= link_to "About us", about_path, :class => 'learn-more' %></p>
     </div>
-    <%= image_tag("about2.jpg", :class => 'img-rounded') %>
+    <%= link_to image_tag("about2.jpg", :class => 'img-rounded'), about_path %>
   </div>
 
   <div class="grid-block slide">
