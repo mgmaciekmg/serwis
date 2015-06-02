@@ -8,40 +8,42 @@
 <% end %>
 
 <div class="jumbotron">
+<h2>Reservate your repair!</h2>
+<p>Please, fill all the fields below to reservate repair of your car.</p>
 <%= form_for @reservation, :html => { :class => 'form-horizontal' } do |f| %>
 
   <div class="form-group">
-    <%= f.label :email, :class => 'col-sm-2 control-label' %>
+    <%= f.label :email, '*E-mail:', :class => 'col-sm-2 control-label' %>
     <div class="col-sm-10">
-      <%= f.text_field :email, :class => 'form-control' %><br />
+      <%= f.text_field :email, placeholder: "Your e-mail...", :class => 'form-control' %><br />
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :phone, :class => 'col-sm-2 control-label' %>
+    <%= f.label :phone, '*Phone number:', :class => 'col-sm-2 control-label' %>
     <div class="col-sm-10">
-      <%= f.text_field :phone, :class => 'form-control' %><br />
+      <%= f.text_field :phone, placeholder: "Your phone number...", :class => 'form-control' %><br />
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :name, :class => 'col-sm-2 control-label' %>
+    <%= f.label :name, '*Name and surname:', :class => 'col-sm-2 control-label' %>
     <div class="col-sm-10">    
-      <%= f.text_field :name, :class => 'form-control' %><br />
+      <%= f.text_field :name, placeholder: "Your name and surname...", :class => 'form-control' %><br />
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :desc, :class => 'col-sm-2 control-label' %>
+    <%= f.label :desc, 'Your description:', :class => 'col-sm-2 control-label' %>
     <div class="col-sm-10">   
-      <%= f.text_field :desc, :class => 'form-control' %><br />
+      <%= f.text_field :desc, placeholder: "Describe here your problem with car...", :class => 'form-control' %><br />
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :date, :class => 'col-sm-2 control-label' %>
+    <%= f.label :date, '*When you want to meet?', :class => 'col-sm-2 control-label' %>
     <div class="col-sm-10">   
-      <%= f.text_field :date, :class => 'form-control', :id => 'datetimepicker4', :default => Date.tomorrow %><br />
+      <%= f.text_field :date, placeholder: "Format: YYYY-MM-DD HH:mm", :class => 'form-control', :id => 'datetimepicker4', :default => Date.tomorrow %><br />
     </div>
     <script type="text/javascript">
             $(function () {
@@ -56,8 +58,9 @@
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <%= f.submit :class => 'btn btn-default' %>
+      <%= f.submit :value => "Send reservation!", :class => 'btn btn-default' %>
     </div>
   </div>
 <% end %>
+<p>* - required fields.</p>
 </div>
