@@ -1,5 +1,11 @@
+<% content_for :title, "Contact" %>
+
 <div class="jumbotron">
 <h2>Contact us</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus, enim non ornare malesuada, magna turpis pulvinar erat, eu hendrerit dolor mauris quis nulla. Quisque tristique ligula a ex facilisis congue. Phasellus fermentum erat eu mi malesuada, a malesuada purus volutpat. 
+</p>
+
 <%= form_for @message, url: contact_path, :html => { :class => 'form-horizontal' } do |m| %>
     <div class="form-group">
       <%= m.label :subject, :class => 'col-sm-2 control-label' %>

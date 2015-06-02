@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Serwis</title>
+  <title>Serwis | <%= yield(:title) %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Imagetoolbar" content="no" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -28,6 +28,7 @@
             <ul class="nav navbar-nav">
               <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "New reservation", new_reservation_path %></li>
+              <li><%= link_to "Prices", prices_path %></li>
               <li><%= link_to "About us", about_path %></li>
               <li><%= link_to "Our services", our_services_path %></li>
               <li><%= link_to "Contact", contact_path %></li>
@@ -62,7 +63,23 @@
       <!-- </div> -->
 
 <div id="footer">
-<p>dsdsdasdasd</p>
+  <div class="content">
+    <address>
+      <strong>Glocar</strong><br />
+      Ul. Budowlanych 138<br />
+      45-000 Opole<br />
+      <abbr title="Phone">Tel.</abbr> 666 666 666
+    </address>
+  </div>
+
+  <div class="content embed-responsive embed-responsive-4by3">
+    <h4>Jak do nas dojechać?</h4>
+    <iframe class="img-rounded embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d311241.94417328725!2d16.9572841361328!3d52.4505644873016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1433265019460" width="480" height="250"  style="border:0"></iframe>
+  </div>
+
+  <div class="copy">
+    <small>© Copyright 2015 by <%= link_to "cruzzapps.com", "http://www.cruzzapps.com" %></small>
+  </div>
 </div>
 
     </div> <!-- /container -->   
