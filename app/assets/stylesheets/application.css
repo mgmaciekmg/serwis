@@ -39,10 +39,10 @@ img:hover {
         -o-background-size: cover;
     }
 
-    #footer, #push {
+    #footer {
         width: 100% !important;
         background: #222222;
-        height: 15%;
+        height: auto;
         margin: 5px 0;
         padding: 20px 20px;
         border-radius: 6px;
@@ -58,9 +58,12 @@ img:hover {
 
     .footer, .copy {
         position: relative;
+        display: block;
         text-align: center;
         font-size: 12px;
         color: #9B9B9A;
+        margin: 8px 0;
+        padding-top: 25px;
     }
 
     .footer, h4 {
@@ -69,11 +72,12 @@ img:hover {
     }
 
     .footer, .content {
-        display: inline-block;
+        display: inline-table;
         position: relative;
         width: 45%;
         height: 200px;
-        padding: 10px 20px;
+        margin: -20px 0;
+        padding: 10px 20px !important;
         clear: both;
     }
 
