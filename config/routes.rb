@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'messages/new'
 
-  devise_for :admins, :skip => [:registrations]
+  devise_for :admins
 
 
   resources :reservations, only: [:index, :new, :create, :edit, :update, :show, :destroy]
