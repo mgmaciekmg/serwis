@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+	before_action :authenticate_admin!, only: :control
+
 	def index
 	end
 
@@ -15,5 +17,11 @@ class PagesController < ApplicationController
 	end
 
 	def ourservices
+	end
+
+	def control
+		@res = Reservation.all
+		@resin = Reservation.where('date >= ?', Date.today)
+		@resol = Reservation.where('date <= ?', Date.today)
 	end
 end

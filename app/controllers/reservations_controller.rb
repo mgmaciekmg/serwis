@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-	before_action :authenticate_admin!, only: [:index, :show, :destroy]
+	before_action :authenticate_admin!, only: [:index, :edit, :update, :show, :destroy]
 	before_action :find_reservation, only: [:show, :destroy]
 
 	def find_reservation
@@ -16,8 +16,8 @@ class ReservationsController < ApplicationController
 
 	def create
 		@reservation = Reservation.create(reservation_params)
-		test = Reservation.select(:date).where('date = ?', @reservation.date).count
-		if test <= 3
+		check_count = Reservation.select(:date).where('date = ?', @reservation.date).count
+		if check_count <= 3
 			if @reservation.save			
 				flash[:success] = "Successfully created reservation."
 				redirect_to root_path
@@ -27,6 +27,20 @@ class ReservationsController < ApplicationController
 		else
 			flash[:error] = "This date is reserved."
 			render 'new'
+		end
+	end
+
+	def edit
+	end
+
+	def update
+		if @reservation.save
+			@reservation.update_attributes(reservation_params)
+			flash[:success] = "Successfully edited reservation."
+			redirect_to reservations_path
+		else
+			flash[:error] = "Error while updating reservation."
+			render 'edit'
 		end
 	end
 

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   get 'messages/new'
 
-  devise_for :admins
-  resources :reservations, only: [:index, :new, :create, :show, :destroy]
+  devise_for :admins, :skip => [:registrations]
+
+
+  resources :reservations, only: [:index, :new, :create, :edit, :update, :show, :destroy]
   root "pages#index"
 
   match '/index' => 'pages#index', via: [:get, :post]
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
   match '/prices' => 'pages#prices', via: [:get, :post]
   match '/services' => 'pages#services', via: [:get, :post]
   match '/our-services' => 'pages#ourservices', via: [:get, :post]
+  match '/control-panel' => 'pages#control', via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

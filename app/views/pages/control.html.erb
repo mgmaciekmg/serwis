@@ -1,0 +1,113 @@
+<% content_for :title, "Control panel" %>
+
+<div class="jumbotron">
+
+<h1>Control panel</h1>
+
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#incoming" aria-controls="incoming" role="tab" data-toggle="tab">Incoming reservations</a></li>
+    <li role="presentation"><a href="#old" aria-controls="old" role="tab" data-toggle="tab">Old reservations</a></li>
+    <li role="presentation"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">All reservations</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    
+    <!-- Div for incoming reservations -->
+    <div role="tabpanel" class="tab-pane" id="incoming">
+    	<!-- Table for incoming reservations. -->
+    	<div class="table-responsive">
+  			<table class="table table-hover">
+    			<tr>
+      			  <th>Date</th>
+      			  <th>Name and surname</th>
+      			  <th>E-mail</th>
+      			  <th>Phone number</th>
+      			  <th>Description</th>
+      			  <th>Options</th>
+    			</tr>
+    			<% @resin.each do |reservation| %>
+    			<tr class="danger">
+    			  <td><%= reservation.date %></td>
+    			  <td><%= reservation.name %></td>
+    			  <td><%= reservation.email %></td>
+    			  <td><%= reservation.phone %></td>
+    			  <td><%= reservation.desc %></td>
+    			  <td><%= link_to "Show", reservation_path(reservation) %> | 
+    			  	  <%= link_to "Delete", reservation_path(reservation), :method => :delete %>
+    			</tr>
+    			<% end %>
+  			</table>
+		</div>
+		<!-- End of table. -->
+    </div>
+    <!-- end of div for incoming. -->
+
+    <!-- Div for old reservations -->
+    <div role="tabpanel" class="tab-pane" id="old">
+    	<!-- Table for old reservations. -->
+    	<div class="table-responsive">
+  			<table class="table table-hover">
+    			<tr>
+      			  <th>Date</th>
+      			  <th>Name and surname</th>
+      			  <th>E-mail</th>
+      			  <th>Phone number</th>
+      			  <th>Description</th>
+      			  <th>Options</th>
+    			</tr>
+    			<% @resol.each do |reservation| %>
+    			<tr class="success">
+    			  <td><%= reservation.date %></td>
+    			  <td><%= reservation.name %></td>
+    			  <td><%= reservation.email %></td>
+    			  <td><%= reservation.phone %></td>
+    			  <td><%= reservation.desc %></td>
+    			  <td><%= link_to "Show", reservation_path(reservation) %> | 
+    			  	  <%= link_to "Delete", reservation_path(reservation), :method => :delete %></td>
+    			</tr>
+    			<% end %>
+  			</table>
+		</div>
+		<!-- End of table. -->
+    </div>
+   	<!-- End of div. -->
+
+   	<!-- Div for all reservations -->
+    <div role="tabpanel" class="tab-pane" id="all">
+    	<!-- Table for all reservations. -->
+    	<div class="table-responsive">
+  			<table class="table table-hover">
+    			<tr>
+      			  <th>Date</th>
+      			  <th>Name and surname</th>
+      			  <th>E-mail</th>
+      			  <th>Phone number</th>
+      			  <th>Description</th>
+      			  <th>Options</th>
+    			</tr>
+    			<% @res.each do |reservation| %>
+    			<tr class="info">
+    			  <td><%= reservation.date %></td>
+    			  <td><%= reservation.name %></td>
+    			  <td><%= reservation.email %></td>
+    			  <td><%= reservation.phone %></td>
+    			  <td><%= reservation.desc %></td>
+    			  <td><%= link_to "Show", reservation_path(reservation) %> | 
+    			  	  <%= link_to "Delete", reservation_path(reservation), :method => :delete %></td>
+    			</tr>
+    			<% end %>
+  			</table>
+		</div>
+		<!-- End of table. -->
+    </div>
+   	<!-- End of div. -->
+
+  </div>
+
+</div>
+
+</div>
