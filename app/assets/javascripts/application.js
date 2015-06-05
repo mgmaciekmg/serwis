@@ -16,7 +16,7 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require turbolinks
-//= require_tree .
+// require_tree .
 
 $(document).ready(function() {
 	$('.standard').hover(
@@ -37,7 +37,7 @@ $(document).ready(function() {
 	);
 	$('.slide').hover(
 		function(){
-			$(this).find('.caption').slideDown();
+			$(this).find('.caption').slideDown('fast');
 		},
 		function(){
 			$(this).find('.caption').slideUp('fast');

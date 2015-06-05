@@ -103,7 +103,7 @@ img:hover {
     	height: auto;
     	margin: 0 0 6px 6px;
         display: inline-block;
-        /*overflow: hidden;*/
+        overflow: hidden;
     }
 
     .grid-block p {
@@ -132,7 +132,6 @@ img:hover {
         padding: 20px;
     	top: 0;
     	left: 0;
-    	/*background: url(trans-black-50.png);*/
     	background-color: white;
     	opacity: 0.6;
     	width: 100%;
