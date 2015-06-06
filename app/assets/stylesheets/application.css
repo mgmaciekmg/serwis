@@ -81,6 +81,10 @@ img:hover {
         clear: both;
     }
 
+    .footer, .content img {
+        padding: 3px 1px;
+    }
+
     .img-responsive {  
         display: block;  
         height: auto;  
