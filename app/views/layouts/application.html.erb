@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Serwis | <%= yield(:title) %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= favicon_link_tag 'icon.ico' %>
@@ -30,7 +30,7 @@
               <li><%= link_to "Services", services_path%></li>
               <li><%= link_to "Prices", prices_path %></li>
               <li><%= link_to "New reservation", new_reservation_path %></li>            
-              <li><%= link_to "Our services", our_services_path %></li>
+              <li><%= link_to "Where we are?", where_we_are_path %></li>
               <li><%= link_to "Contact", contact_path %></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -83,13 +83,15 @@
       <abbr title="Phone">Tel.</abbr> 666 666 666<br />
       <%= link_to "Znajdź nas na mapie...", "https://goo.gl/maps/nl7ru", :target => '_blank' %>
       </p>
+  </div>
 
+  <div class="content">
       <h4>Godziny otwarcia</h4>
       <p> Pn - Pt - 9:00 - 18:00<br />
           Sob - 9:00 - 14:00</p>
   </div>
 
-  <div class="content">
+  <div class="partners">
       <h4>Partnerzy</h4>
       <p><%= image_tag("premio.png", :width => '160', :height => '65', :class => 'img-rounded') %>
          <%= image_tag("goodyear.jpg", :width => '160', :height => '65', :class => 'img-rounded') %>

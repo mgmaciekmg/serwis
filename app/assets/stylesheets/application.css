@@ -74,7 +74,17 @@ img:hover {
     .footer, .content {
         display: inline-table;
         position: relative;
-        width: 45%;
+        width: 23%;
+        height: 180px;
+        margin: -20px 0;
+        padding: 10px 20px !important;
+        clear: both;
+    }
+
+    .footer, .partners {
+        display: inline-table;
+        position: relative;
+        width: 50%;
         height: 180px;
         margin: -20px 0;
         padding: 10px 20px !important;
@@ -83,6 +93,7 @@ img:hover {
 
     .footer, .content img {
         padding: 3px 1px;
+        display: inline-block;
     }
 
     .img-responsive {  

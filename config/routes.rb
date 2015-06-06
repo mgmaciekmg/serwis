@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post 'contact', to: 'messages#create'
   match '/prices' => 'pages#prices', via: [:get, :post]
   match '/services' => 'pages#services', via: [:get, :post]
-  match '/our-services' => 'pages#ourservices', via: [:get, :post]
+  match '/where-we-are' => 'pages#where', via: [:get, :post]
   match '/control-panel' => 'pages#control', via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
