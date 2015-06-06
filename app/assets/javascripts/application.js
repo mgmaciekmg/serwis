@@ -35,12 +35,12 @@ $(document).ready(function() {
 			$(this).find('.caption').fadeOut(250);
 		}
 	);
-	$('.slide').hover(
-		function(){
-			$(this).find('.caption').slideDown('fast');
-		},
-		function(){
-			$(this).find('.caption').slideUp('fast');
-		}
-	);
+	$(document).on({
+        'mouseenter': function() {
+            $(this).find('.caption').slideDown('fast');
+        },
+        'mouseleave': function() {
+            $(this).find('.caption').slideUp('fast');
+        }
+    }, '.slide');
 });
