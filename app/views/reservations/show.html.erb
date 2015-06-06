@@ -12,4 +12,7 @@ Phone: <%= @reservation.phone %><br />
 Description: <%= @reservation.desc %><br />
 
 <%= link_to "Delete this reservation", reservation_path(@reservation), :method => :delete %>
+
+<%= render 'layouts/links' %>
+
 </div>
