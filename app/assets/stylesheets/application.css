@@ -103,7 +103,11 @@ img:hover {
     } 
 
     .jumbotron {
-        opacity: 0.85;
+        opacity: 0.95;
+    }
+
+    .jumbotron p {
+        color: black;
     }
 
     .grid-block-container {

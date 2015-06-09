@@ -1,15 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  email: MyString
-  phone: MyString
-  desc: MyString
-  name: MyString
-  date: 2015-05-28 19:31:08
-
-two:
-  email: MyString
-  phone: MyString
-  desc: MyString
-  name: MyString
-  date: 2015-05-28 19:31:08
+<% 50.times do |n| %>
+reservation_<%= n %>:
+  email: test@test.com
+  phone: <%= n %>
+  desc: test_<%= n %>
+  name: human_<%= n %>
+  date: 2015-06-15 20:30:00
+<% end %>

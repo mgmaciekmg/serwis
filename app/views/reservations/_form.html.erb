@@ -48,9 +48,10 @@
     <script type="text/javascript">
             $(function () {
                 $('#datetimepicker4').datetimepicker({
+                  stepping: 30,
                   format: 'YYYY-MM-DD HH:mm',
                   sideBySide: true,
-                  minDate: moment()
+                  minDate: moment({hour: 8, minute: 30})
                 });
             });
         </script>
