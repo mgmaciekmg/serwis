@@ -5,3 +5,7 @@ This is simple page with reservation system for my friend.
 All needed gems are in Gemfile so if you want to try my project just pull it, run bundle and migration.
 
 If you want to change something - feel free :)
+
+TODO:
+- fix reservation controller
+- cookies alert
