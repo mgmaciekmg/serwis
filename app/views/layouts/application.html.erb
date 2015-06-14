@@ -4,21 +4,9 @@
   <title>Serwis | <%= yield(:title) %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= favicon_link_tag 'icon.ico' %>
   <%= csrf_meta_tags %>
 
-<script src="http://cookiealert.sruu.pl/CookieAlert-latest.min.js"></script>
-<script>
-CookieAlert.init({
-  style: 'dark',
-  position: 'bottom',
-  opacity: '1',
-  displayTime: 20000,
-  cookiePolicy: 'http://cookiealert.sruu.pl/o-ciasteczkach',
-  text: 'Ten serwis wykorzystuje pliki cookies. Korzystanie z witryny oznacza zgodę na ich zapis lub odczyt wg ustawień przeglądarki.'
-});
-</script>
 
 </head>
 <body>
@@ -117,6 +105,17 @@ CookieAlert.init({
 
     </div> <!-- /container -->   
 
-
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <script src="http://cookiealert.sruu.pl/CookieAlert-latest.min.js"></script>
+<script>
+CookieAlert.init({
+  style: 'dark',
+  position: 'bottom',
+  opacity: '1',
+  displayTime: 20000,
+  cookiePolicy: 'http://cookiealert.sruu.pl/o-ciasteczkach',
+  text: 'Ten serwis wykorzystuje pliki cookies. Korzystanie z witryny oznacza zgodę na ich zapis lub odczyt wg ustawień przeglądarki.'
+});
+</script>
 </body>
 </html>
