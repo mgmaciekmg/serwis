@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
 	before_action :authenticate_admin!, only: [:index, :edit, :update, :show, :destroy]
-	before_action :find_reservation, only: [:show, :destroy]
+	before_action :find_reservation, only: [:show, :destroy, :update]
 
 	def find_reservation
 		@reservation = Reservation.find(params[:id])
@@ -15,10 +15,9 @@ class ReservationsController < ApplicationController
 	end
 
 	def create
-		@reservation = Reservation.new(reservation_params)
+		@reservation = Reservation.create(reservation_params)
 		check_count = Reservation.select(:date).where('date = ?', @reservation.date).count
-		if check_count <= 2
-			@reservation = Reservation.create(reservation_params)
+		if check_count <= 3
 			if @reservation.save			
 				flash[:success] = "Successfully created reservation."
 				redirect_to root_path
@@ -61,6 +60,6 @@ class ReservationsController < ApplicationController
 	private
 
 	def reservation_params
-		params.require(:reservation).permit(:id, :email, :phone, :name, :desc, :date)
+		params.require(:reservation).permit(:id, :email, :phone, :name, :desc, :date, :type_of_vehicle, :service_name)
 	end
 end

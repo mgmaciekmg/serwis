@@ -27,6 +27,8 @@
       			  <th>E-mail</th>
       			  <th>Phone number</th>
       			  <th>Description</th>
+              <th>Type</th>
+              <th>Service name</th>
       			  <th>Options</th>
     			</tr>
     			<% @resin.each do |reservation| %>
@@ -36,6 +38,8 @@
     			  <td><%= reservation.email %></td>
     			  <td><%= reservation.phone %></td>
     			  <td><%= reservation.desc %></td>
+            <td><%= reservation.type_of_vehicle %></td>
+            <td><%= reservation.service_name %></td>
     			  <td><%= link_to "Show", reservation_path(reservation) %> | 
     			  	  <%= link_to "Delete", reservation_path(reservation), :method => :delete %>
     			</tr>
@@ -57,6 +61,8 @@
       			  <th>E-mail</th>
       			  <th>Phone number</th>
       			  <th>Description</th>
+              <th>Type</th>
+              <th>Service name</th>
       			  <th>Options</th>
     			</tr>
     			<% @resol.each do |reservation| %>
@@ -66,6 +72,8 @@
     			  <td><%= reservation.email %></td>
     			  <td><%= reservation.phone %></td>
     			  <td><%= reservation.desc %></td>
+            <td><%= reservation.type_of_vehicle %></td>
+            <td><%= reservation.service_name %></td>
     			  <td><%= link_to "Show", reservation_path(reservation) %> | 
     			  	  <%= link_to "Delete", reservation_path(reservation), :method => :delete %></td>
     			</tr>
@@ -87,6 +95,8 @@
       			  <th>E-mail</th>
       			  <th>Phone number</th>
       			  <th>Description</th>
+              <th>Type</th>
+              <th>Service name</th>
       			  <th>Options</th>
     			</tr>
     			<% @res.each do |reservation| %>
@@ -96,6 +106,8 @@
     			  <td><%= reservation.email %></td>
     			  <td><%= reservation.phone %></td>
     			  <td><%= reservation.desc %></td>
+            <td><%= reservation.type_of_vehicle %></td>
+            <td><%= reservation.service_name %></td>
     			  <td><%= link_to "Show", reservation_path(reservation) %> | 
     			  	  <%= link_to "Delete", reservation_path(reservation), :method => :delete %></td>
     			</tr>
