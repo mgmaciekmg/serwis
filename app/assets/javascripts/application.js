@@ -37,10 +37,12 @@ $(document).ready(function() {
 	);
 	$(document).on({
         'mouseenter': function() {
+        	$(this).find('.cap').slideUp(30);
             $(this).find('.caption').slideDown('fast');
         },
         'mouseleave': function() {
             $(this).find('.caption').slideUp('fast');
+            $(this).find('.cap').slideDown('fast');
         }
     }, '.slide');
 });

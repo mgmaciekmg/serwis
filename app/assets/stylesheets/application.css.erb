@@ -28,7 +28,7 @@ img:hover {
     body { 
         padding-top: 20px;
         padding-bottom: 20px;
-        background-image: url('background.jpg');
+        background-image: url(<%= asset_path 'background.jpg' %>);
         width: 100%;
         height: 100%;
         background-size: cover;
@@ -143,6 +143,27 @@ img:hover {
     	padding: 10px;
     	border: 1px solid #ddd;
     }
+
+    .cap {
+        top: 180px;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        height: 45px;
+        width: 100%;
+    }
+
+    .cap h2 {
+        margin: 5px 15px;
+        text-align: center;
+        font-weight: bold;
+        color: #08c;
+    }
+
+    .cap p {
+        font-size: 1em;
+        line-height: 1.5em;
+        margin: 0 20px 15px;
+    }
      
     .caption {
     	display: none;
@@ -151,10 +172,11 @@ img:hover {
         padding: 20px;
     	top: 0;
     	left: 0;
-    	background-color: rgba(255, 255, 255, 0.6);
+    	background-color: rgba(255, 255, 255, 0.7);
     	width: 100%;
     	height: 100%;
     }
+
     .caption h2, .caption p {
     	color: #000;
     	margin: 20px;

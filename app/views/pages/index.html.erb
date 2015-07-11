@@ -2,7 +2,10 @@
 
 <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0); padding: 0 0 !important;opacity: 1 !important;">
   <div class="grid-block slide">
-    <div class="caption">
+    <div class="cap">
+      <h2>O nas</h2>
+    </div>
+    <div class="caption" onclick="location.href='/about';" style="cursor:pointer;">
         <h2><%= link_to "About us", about_path %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p><%= link_to "About us", about_path, :class => 'learn-more' %></p>
@@ -11,7 +14,10 @@
   </div>
 
   <div class="grid-block slide">
-    <div class="caption">
+    <div class="cap">
+      <h2>Usługi</h2>
+    </div>
+    <div class="caption" onclick="location.href='/services';" style="cursor:pointer;">
         <h2><%= link_to "Services", services_path %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p><%= link_to "Services", services_path, :class => 'learn-more' %></p>
@@ -20,7 +26,10 @@
   </div>
 
   <div class="grid-block slide">
-    <div class="caption">
+    <div class="cap">
+      <h2>Cennik</h2>
+    </div>
+    <div class="caption" onclick="location.href='/prices';" style="cursor:pointer;">
         <h2><%= link_to "Prices", prices_path %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p><%= link_to "Prices", prices_path, :class => 'learn-more' %></p>
@@ -29,7 +38,10 @@
   </div>
 
   <div class="grid-block slide">
-    <div class="caption">
+    <div class="cap">
+      <h2>Rezerwacja</h2>
+    </div>
+    <div class="caption" onclick="location.href='/reservations/new';" style="cursor:pointer;">
         <h2><%= link_to "New reservation", new_reservation_path %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p><%= link_to "New reservation", new_reservation_path, :class => 'learn-more' %></p>
@@ -38,7 +50,10 @@
   </div>
 
   <div class="grid-block slide">
-    <div class="caption">
+    <div class="cap">
+      <h2>Gdzie nas znaleźć?</h2>
+    </div>
+    <div class="caption" onclick="location.href='/where-we-are';" style="cursor:pointer;">
         <h2><%= link_to "Where we are?", where_we_are_path %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p><%= link_to "Where we are?", where_we_are_path, :class => 'learn-more' %></p>
@@ -47,7 +62,10 @@
   </div>
 
   <div class="grid-block slide">
-    <div class="caption">
+    <div class="cap">
+      <h2>Kontakt</h2>
+    </div>
+    <div class="caption" onclick="location.href='/contact';" style="cursor:pointer;">
         <h2><%= link_to "Contact", contact_path %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p><%= link_to "Contact", contact_path, :class => 'learn-more' %></p>
