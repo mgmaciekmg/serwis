@@ -7,6 +7,6 @@ All needed gems are in Gemfile so if you want to try my project just pull it, ru
 If you want to change something - feel free :)
 
 TODO:
-- fix reservation controller
+- fix reservation controller /* DONE */
 - cookies alert (http://cookiealert.sruu.pl/home) /* DONE */
 - description on INDEX::PAGES images
