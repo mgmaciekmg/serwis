@@ -46,3 +46,7 @@ $(document).ready(function() {
         }
     }, '.slide');
 });
+
+$(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});
