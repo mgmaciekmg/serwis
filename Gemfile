@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem 'libv8'
+
 # Gem to use with this project - you need them!
 gem 'devise'
 
