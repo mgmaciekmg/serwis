@@ -9,4 +9,4 @@ If you want to change something - feel free :)
 TODO:
 - fix reservation controller /* DONE */
 - cookies alert (http://cookiealert.sruu.pl/home) /* DONE */
-- description on INDEX::PAGES images
+- description on INDEX::PAGES images /* DONE */
