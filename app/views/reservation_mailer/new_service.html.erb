@@ -1,0 +1,11 @@
+<div class="jumbotron">
+<h1>ReservationMailer#new_service</h1>
+
+<p>
+  Masz nową rezerwację na dzień: <%= @reservation.date %><br />
+  Od: <%= @reservation.name %> <%= @reservation.email %> <%= @reservation.phone %><br />
+  Opis problemu: <%= @reservation.desc %><br />
+  Typ pojazdu: <%= @reservation.type_of_vehicle %><br />
+  Serwis: <%= @reservation.service_name %>
+</p>
+</div>

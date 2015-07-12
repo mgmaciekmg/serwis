@@ -18,7 +18,8 @@ class ReservationsController < ApplicationController
 		@reservation = Reservation.create(reservation_params)
 		check_count = Reservation.select(:date).where('date = ?', @reservation.date).count
 		if check_count <= 3
-			if @reservation.save			
+			if @reservation.save
+				ReservationMailer.new_service(@reservation).deliver
 				flash[:success] = "Successfully created reservation."
 				redirect_to root_path
 			else
@@ -37,7 +38,7 @@ class ReservationsController < ApplicationController
 		if @reservation.save
 			@reservation.update_attributes(reservation_params)
 			flash[:success] = "Successfully edited reservation."
-			redirect_to reservations_path
+			redirect_to root_path
 		else
 			flash[:error] = "Error while updating reservation."
 			render 'edit'
