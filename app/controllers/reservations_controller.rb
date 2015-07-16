@@ -51,7 +51,6 @@ class ReservationsController < ApplicationController
 	def destroy
 		if @reservation.destroy
 			flash[:success] = "Successfully deleted reservation."
-			redirect_to reservations_path
 			respond_to do |format|
 			  format.html { redirect_to reservations_path }
 			  format.js
