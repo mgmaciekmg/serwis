@@ -51,10 +51,7 @@ class ReservationsController < ApplicationController
 	def destroy
 		if @reservation.destroy
 			flash[:success] = "Successfully deleted reservation."
-			respond_to do |format|
-			  format.html { redirect_to reservations_path }
-			  format.js
-			end
+			redirect_to reservations_path
 		else
 			flash[:error] = "Error while deleting reservation."
 			redirect_to reservations_path(@reservation)
