@@ -18,7 +18,7 @@
     <td><%= reservation.name %></td>
     <td><%= reservation.desc %></td>
     <td><%= reservation.date %></td>
-    <td><%= link_to "Show", reservation_path(reservation) %></td>
+    <td><%= link_to "Show", reservation_path(reservation) %> <%= link_to "Destroy", reservation, method: :delete, remote: true %></td>
   <% end %>
   </tr>
 </table>
