@@ -12,6 +12,7 @@
     <td>Options</td>
   </tr>
   <% @reservations.each do |reservation| %>
+  <%= div_for reservation do %>
   <tr>
     <td><%= reservation.email %></td>
     <td><%= reservation.phone %></td>
@@ -21,6 +22,7 @@
     <td><%= link_to "Show", reservation_path(reservation) %> <%= link_to "Destroy", reservation, method: :delete, remote: true %></td>
   <% end %>
   </tr>
+  <% end %>
 </table>
 
 <%= render 'layouts/links' %>
