@@ -37,12 +37,12 @@ $(document).ready(function() {
 	);
 	$(document).on({
         'mouseenter': function() {
-        	$(this).find('.cap').slideUp(30);
-            $(this).find('.caption').slideDown('fast');
+        	$(this).find('.cap').hide();
+            $(this).find('.caption').slideDown(300);
         },
         'mouseleave': function() {
-            $(this).find('.caption').slideUp('fast');
-            $(this).find('.cap').slideDown('fast');
+            $(this).find('.caption').slideUp(300);
+            $(this).find('.cap').show();
         }
     }, '.slide');
 });

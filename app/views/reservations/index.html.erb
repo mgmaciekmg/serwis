@@ -1,27 +1,16 @@
 <% content_for :title, "Reservations" %>
 
 <div class="jumbotron">
-<h1>Listebing of reservations</h1>
-<table class="table table-hover">
-  <tr>
-    <td>E-mail</td>
-    <td>Phone</td>
-    <td>Name</td>
-    <td>Desc</td>
-    <td>Date</td>
-    <td>Options</td>
-  </tr>
-  <% @reservations.each do |reservation| %>
-  <tr>
-    <td><%= reservation.email %></td>
-    <td><%= reservation.phone %></td>
-    <td><%= reservation.name %></td>
-    <td><%= reservation.desc %></td>
-    <td><%= reservation.date %></td>
-    <td><%= link_to "Show", reservation_path(reservation) %></td>
+<h1>Rezerwacje</h1>
+<% @reservations.each do |reservation| %>
+  <%= div_for reservation do %>
+    <b>Nazwisko:</b> <%= reservation.name %> <b>| Data:</b> <%= reservation.date %> <b>|</b> <%= reservation.service_name %> <b>|</b> <%= reservation.type_of_vehicle %> <b>| E-mail:</b> <%= reservation.email %> <b>| Tel:</b> <%= reservation.phone %> 
+    <div class="options">
+      <%= link_to "Pokaż", reservation_path(reservation), :class => 'btn btn-default' %> | 
+      <%= link_to "Usuń", reservation, method: :delete, remote: true, :class => 'btn btn-default' %>
+    </div>
   <% end %>
-  </tr>
-</table>
+<% end %>
 
 <%= render 'layouts/links' %>
 
