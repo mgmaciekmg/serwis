@@ -10,3 +10,5 @@ TODO:
 - fix reservation controller /* DONE */
 - cookies alert (http://cookiealert.sruu.pl/home) /* DONE */
 - description on INDEX::PAGES images /* DONE */
+- fix footer#partners
+

@@ -18,7 +18,7 @@ class ReservationsController < ApplicationController
 		@reservation = Reservation.new(reservation_params)
 		check_count = Reservation.select(:date).where('date = ?', @reservation.date).count
 		if check_count <= 3
-			if @reservation.save!
+			if @reservation.save
 				ReservationMailer.new_service(@reservation).deliver
 				flash[:success] = "Successfully created reservation."
 				redirect_to root_path
